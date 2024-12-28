@@ -1,0 +1,14 @@
+{
+  "name": "nstours",
+  "version": "1.0.0",
+  "description": "landing page for nstours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --silence-deprecation=import ./sass/main.scss ./css/style.css -w"
+  },
+  "author": "Calvin",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
