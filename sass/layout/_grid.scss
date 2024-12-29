@@ -1,0 +1,14 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    @include clearfix;
+
+    .col-1 {
+        @extend %colStyle;
+    }
+
+    .col-2 {
+        @extend %colStyle;
+    }
+}
