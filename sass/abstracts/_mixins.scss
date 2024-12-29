@@ -5,3 +5,12 @@
         clear: both;
     }
 }
+
+@mixin col-horizontal-style($num, $horizontal-length) {
+    width: calc((100% - #{$gutter-horizontal}) / $num);
+    float: left;
+
+    &:not(:last-child) {
+        margin-right: $horizontal-length;
+    }
+}

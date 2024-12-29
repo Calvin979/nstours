@@ -1,8 +1,6 @@
-%colStyle {
-    width: calc((100% - #{$gutter-horizontal}) / 2);
-    float: left;
-
-    &:not(:last-child) {
-        margin-right: $gutter-horizontal;
-    }
+%linear-font {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }

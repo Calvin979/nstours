@@ -5,10 +5,26 @@
     @include clearfix;
 
     .col-1 {
-        @extend %colStyle;
+        @include col-horizontal-style(2, $gutter-horizontal);
     }
 
     .col-2 {
-        @extend %colStyle;
+        @include col-horizontal-style(2, $gutter-horizontal);
+    }
+
+    .col-3 {
+        @include col-horizontal-style(4, 6rem);
+    }
+
+    .col-4 {
+        @include col-horizontal-style(4, 6rem);
+    }
+
+    .col-5 {
+        @include col-horizontal-style(4, 6rem);
+    }
+
+    .col-6 {
+        @include col-horizontal-style(4, 6rem);
     }
 }
