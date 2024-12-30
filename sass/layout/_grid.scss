@@ -27,4 +27,16 @@
     .col-6 {
         @include col-horizontal-style(4, 6rem);
     }
+
+    .col-7 {
+        @include col-horizontal-style(3, 10rem);
+    }
+
+    .col-8 {
+        @include col-horizontal-style(3, 10rem);
+    }
+
+    .col-9 {
+        @include col-horizontal-style(3, 10rem);
+    }
 }
