@@ -16,6 +16,7 @@
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
+        // 3. when we hover the button, transform pseudo element to simulate animation
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
@@ -37,17 +38,23 @@
         }
     }
 
+    // 1. create a pseudo element that was hidden behind the button
     &::after {
         content: "";
         display: inline-block;
+        // pseudo element is a child of the button
         height: 100%;
         width: 100%;
         border-radius: 10rem;
+        // 2.
+        // make sure after pseudo element is behind the button
+        // thus we need to set the button to relative position
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
 
+        // 4. because animation is on this after pseudo element, we need to add transition here
         transition: all .4s;
     }
 
