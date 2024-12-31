@@ -2,12 +2,11 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 52rem;
 
     &__side {
         background-color: orangered;
-        color: #fff;
-        height: 50rem;
+        height: 52rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -16,6 +15,8 @@
         backface-visibility: hidden;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        // because we add background-image below, we need to hide the excessive part of the image
+        overflow: hidden;
 
         &--front {
             background-color: $color-white;
@@ -36,5 +37,99 @@
 
     &:hover &__side--back {
         transform: rotateY(0);
+    }
+
+    // front side styling
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        // indicate blend mode of bg-image if we added two images
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../image/cp1.jpg);
+        }
+
+        &--2 {
+            background-image: url(../image/cp2.jpg);
+        }
+
+        &--3 {
+            background-image: url(../image/cp3.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        // in order to compress space of heading-span
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        // if there is a multi-row text, make sure each single row is treated as same separately
+        // simply note that a multi-row text is not a whole entity, but is consisted of each single row
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            // make it to be in the center of a block element
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-gray-light-2;
+                }
+            }
+        }
+    }
+
+    // back side styling
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
