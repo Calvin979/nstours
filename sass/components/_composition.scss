@@ -33,7 +33,6 @@
         }
     }
 
-    // 这里是且
     &:hover &__photo:not(:hover) {
         transform: scale(0.9);
     }
