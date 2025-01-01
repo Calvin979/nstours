@@ -38,7 +38,17 @@
         }
     }
 
-    // 1. create a pseudo element that was hidden behind the button
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            content: "";
+            background-color: $color-primary;
+        }
+    }
+
+    // 1. create a pseudo element that is hidden behind the button
     &::after {
         content: "";
         display: inline-block;
