@@ -38,8 +38,7 @@
     }
 
     &__caption {
-        position: absolute;
-        @include center-element;
+        @include center-element-abs;
         color: $color-white;
         text-transform: uppercase;
         font-size: 1.7rem;

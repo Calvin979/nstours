@@ -15,6 +15,13 @@
     }
 }
 
+@mixin center-element-abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @mixin center-element {
     top: 50%;
     left: 50%;
