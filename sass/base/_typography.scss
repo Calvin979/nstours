@@ -10,6 +10,7 @@ body {
     color: $color-white;
     text-transform: uppercase;
 
+    // fix animation shake -- can be ignored
     backface-visibility: hidden;
     margin-bottom: 6rem;
 
