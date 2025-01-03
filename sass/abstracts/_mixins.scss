@@ -27,3 +27,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// media query manager
+/*
+breakpoint value
+- phone
+- tablet-portrit
+- tablet-lanscape
+- big-desktop
+*/
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: $phone-max-width) {
+            @content
+        }
+    }
+
+    @if $breakpoint == tablet-portrit {
+        @media (max-width: $tablet-portrit-max-width) {
+            @content
+        }
+    }
+
+    @if $breakpoint == tablet-lanscape {
+        @media (max-width: $tablet-lanscape-max-width) {
+            @content
+        }
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: $desktop-max-width) {
+            @content
+        }
+    }
+}

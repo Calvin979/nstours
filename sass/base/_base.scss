@@ -7,7 +7,23 @@
 }
 
 html {
+    // 1rem = 10px
     font-size: 62.5%;
+
+    // 1rem = 9px
+    @include responsive(tablet-lanscape) {
+        font-size: 56.25%;
+    }
+
+    // 1rem = 8px
+    @include responsive(tablet-portrit) {
+        font-size: 50%;
+    }
+
+    // 1rem = 12px
+    @include responsive(big-desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
